@@ -453,7 +453,7 @@ func (ip *InstallationProcess) Execute() (string, error) {
 		},
 		DNS:         cfg.Docker.Network.Dns,
 		LogConfig:   cfg.Docker.ContainerLogConfig(),
-		Privileged:  true,
+		Privileged:  false,
 		NetworkMode: container.NetworkMode(cfg.Docker.Network.Mode),
 		UsernsMode:  container.UsernsMode(cfg.Docker.UsernsMode),
 	}
